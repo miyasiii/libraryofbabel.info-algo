@@ -122,3 +122,33 @@ m = 2^e
 maskone and masktwo in the algorithm I used are necessary because when shifting left you will be making the numbers larger, so you need to cut off an equivalent number of digits. Honestly, I don't remember how I figured out the correct values for maskone and masktwo.
 
 I added the mersenne twister-like bit-shifting operations on top of the LCG because the LCG on its own did not create sufficiently random-seeming results. 
+
+# postscript
+
+## what new about
+- more simple implementation(without cgicc)
+
+## environment
+- WSL(Ubuntu18.04)
+
+## build
+```
+#cd searchPointer
+cmake .
+make
+
+#cd invertPointer
+cmake .
+make
+```
+
+## run
+```
+#placement any JPEG file("test.jpg" 640x416)
+#cd searchPointer
+./main
+
+#placement pointer file("pointer.txt")
+#cd invertPointer
+./main
+```
